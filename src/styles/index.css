@@ -9,3 +9,37 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.vertical-support {
+    width: 1rem; /* ~ 32px */
+    height: 6rem;
+    background-color: black;
+}
+.traffic-light {
+    width: 8rem;
+    height: 18rem;
+    background-color: black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.light {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+.active {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 2rem 1rem lightyellow;
+}

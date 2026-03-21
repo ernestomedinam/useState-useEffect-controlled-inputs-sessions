@@ -10,9 +10,10 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
+import { Friends } from './components/Friends';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home/>
+    <Friends />
   </React.StrictMode>,
 )
