@@ -11,9 +11,10 @@ import '../styles/index.css'
 // components
 import Home from './components/Home';
 import { Friends } from './components/Friends';
+import { Excuse } from './components/Excuse';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Friends />
+    <Excuse />
   </React.StrictMode>,
 )

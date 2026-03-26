@@ -16,34 +16,78 @@ const Home = () => {
 	const lights = ["red", "yellow", "green"];
 
 	// useEffect(() => {}, [])
-	useEffect(() => {
-		console.log(">>> 🤡 hello");
-	}, []);
+	// useEffect(() => {
+	// 	console.log(">>> 🤡 hello");
+	// }, []);
 
 	useEffect(() => {
 		console.log(">>> 😎 running side effect, current light is", currentActiveLight);
 		setTimeout(() => {
 			console.log(">>> 🧙🏽‍♂️ running interval callback, current light is", currentActiveLight);
-			// setState((previous) => value)
+
+
+
+
+
+
+
+			// setState(newValue);
+			let newColor = "red";
+			if (currentActiveLight === "red") {
+				newColor = "yellow";
+			}
+			if (currentActiveLight === "yellow") {
+				newColor = "green";
+			}
+			setCurrentActiveLight(newColor);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			// setState((previous) => newValue);
 			setCurrentActiveLight((currentColor) => {
-				if (currentColor === "red") {
+				if (currentColor == "red") {
 					return "yellow";
 				}
-				if (currentColor === "yellow") {
-					return "green";
+				if (currentColor == "yellow") {
+					return "green"
 				}
 				return "red";
 			});
+
+
+
+
+
+
+
+
+
+
+
+
+
 		}, 5000);
 	}, [currentActiveLight]);
 
-	useEffect(() => {
-		console.log(">>> 🌞 I always run!");
-	});
+	// useEffect(() => {
+	// 	console.log(">>> 🌞 I always run!");
+	// });
 
-	useEffect(() => {
-		console.log(">>> ⚡ this is count:", count);
-	}, [count]);
+	// useEffect(() => {
+	// 	const total = count * count;
+	// 	console.log(">>> 😎 power to second potency", total);
+	// }, []);
 
 	return (
 		<div className="container">

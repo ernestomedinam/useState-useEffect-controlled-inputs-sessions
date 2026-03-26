@@ -13,13 +13,20 @@ export const Friends = (props) => {
         // remove the clicked on friend
         // from the friends array
         const filteredFriendsList = [];
-        for (const friendName of friends) {
-            if (friendName == friend) {
-                // don't do anything
+        for (let _index = 0; _index < friends.length; _index++) {
+            if (_index == index) {
+                // don't push it
             } else {
-                filteredFriendsList.push(friendName);
+                filteredFriendsList.push(friends[_index]);
             }
         }
+        // for (const friendName of friends) {
+        //     if (friendName == friend) {
+        //         // don't do anything
+        //     } else {
+        //         filteredFriendsList.push(friendName);
+        //     }
+        // }
         // and update friends list
         setFriends(filteredFriendsList);
     };
