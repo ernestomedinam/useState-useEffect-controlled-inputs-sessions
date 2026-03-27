@@ -1,7 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const Excuse = () => {
     const [excuse, setExcuse] = useState("this is a placeholder for an excuse... 😐");
+    useEffect(() => {
+        // 1. fetch an excuse
+        fetch(
+            "https://shiny-guide-p75gw9wqr47crrqx-3000.app.github.dev/api/excuses", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }
+        ).then((response) => {
+            return response.json();
+        }).then((body) => {
+            // 2. update the state with the excuse
+            console.log(">>> 💃🏽 this is the body we got!", body);
+            setExcuse(body.excuse);
+        });
+    }, [mounted]);
     return (
         <div className="container">
             <div className="row justify-content-center pt-5 pb-5">
